@@ -1,0 +1,31 @@
+# Executables
+tutorial
+tutorial_debug
+*.exe
+
+# Compiled shaders
+*.spv
+
+# Build artifacts
+*.o
+*.obj
+*.a
+*.lib
+
+# Debug files
+*.pdb
+*.dSYM/
+
+# IDE files (keep .vscode for project setup)
+.vs/
+*.vcxproj*
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
+*.swp
