@@ -67,6 +67,8 @@ private:
     VkDebugUtilsMessengerEXT debugMessenger;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
     VkDevice device;
+    VkQueue graphicsQueue;
+
 
     static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
         VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
@@ -142,6 +144,9 @@ private:
         {
             throw std::runtime_error("failed to create logical device!");
         }
+
+        vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);
+
     }
 
     void pickPhysicalDevice()
